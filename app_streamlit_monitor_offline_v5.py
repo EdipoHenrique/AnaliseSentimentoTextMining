@@ -5,7 +5,7 @@ Created on Sun May  4 19:18:10 2025
 @author: Édipo
 """
 
-import spacy
+#import spacy
 import streamlit as st
 import pandas as pd
 import nltk
@@ -30,6 +30,7 @@ stop_words_personalizadas = {
 
 
 #%% Carregar modelo spaCy para português
+"""
 import spacy.cli
 try:
     nlp = spacy.load("pt_core_news_sm")
@@ -37,6 +38,7 @@ except OSError:
     spacy.cli.download("pt_core_news_sm")
     nlp = spacy.load("pt_core_news_sm")
 
+"""
 
 #%% Configurações da Página
 st.set_page_config(page_title="Análise de Avaliações - Monte Olimpo / Axé Fit", layout="wide")

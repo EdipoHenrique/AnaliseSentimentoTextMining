@@ -4,5 +4,4 @@ nltk
 matplotlib
 plotly
 wordcloud
-spacy
 deep-translator

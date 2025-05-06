@@ -24,7 +24,8 @@ nltk.download('punkt')
 # Lista de palavras personalizadas que devem ser removidas da nuvem
 stop_words_personalizadas = {
     "murcha", "molenga", "fria", "batata", "gelada",
-    "devaney", "alisson", "luciana"
+    "devaney", "alisson", "luciana", "letícia", "leticia", "alfredo",
+    "jéssica", "jessica", "adrian"
 }
 
 
@@ -145,6 +146,12 @@ if uploaded_file:
         ax.axis("off")
         st.pyplot(fig)
 
+    ## Cores para exibição da nuvem de palavras
+
+        #"summer"  - Verde-claro para escuro -----------> Tons mais vivos e melhor contraste
+        #"YlGn"    - Amarelo até verde escuro ----------> Escala com melhor legibilidade e variação suave
+        #"dark2"   - Tons escuros variados -------------> Ótimo para contraste e diversidade de tons
+        #"viridis" - Colormap perceptualmente uniforme -> Agradável e equilibrado para daltônicos 
     
     with col1:
         st.markdown("**Depoimentos Positivos 😃**")
@@ -154,12 +161,7 @@ if uploaded_file:
         st.markdown("**Depoimentos Negativos 😡**")
         gerar_wordcloud(df[df["sentimento"] == "negativo"]["texto_original"], "Negativo", "viridis")
 
-           ## Cores para exibição da nuvem de palavras
-       
-           #"summer"  - Verde-claro para escuro -----------> Tons mais vivos e melhor contraste
-           #"YlGn"    - Amarelo até verde escuro ----------> Escala com melhor legibilidade e variação suave
-           #"dark2"   - Tons escuros variados -------------> Ótimo para contraste e diversidade de tons
-           #"viridis" - Colormap perceptualmente uniforme -> Agradável e equilibrado para daltônicos        
+                  
     
     # Tabela com todos os dados
     st.subheader("📄 Tabela com Sentimentos")

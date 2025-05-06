@@ -17,11 +17,18 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
 
+
+#%% Configurações da Página
+st.set_page_config(page_title="Análise de Avaliações - Monte Olimpo / Axé Fit", layout="wide")
+
+
 nltk.download('stopwords')
 stop_words = set(stopwords.words('portuguese'))
 nltk.download('punkt')
 
-# Lista de palavras personalizadas que devem ser removidas da nuvem
+
+
+#%% Lista de palavras personalizadas que devem ser removidas da nuvem
 stop_words_personalizadas = {
     "murcha", "molenga", "fria", "batata", "gelada",
     "devaney", "alisson", "luciana", "letícia", "leticia", "alfredo",
@@ -40,8 +47,7 @@ except OSError:
 
 """
 
-#%% Configurações da Página
-st.set_page_config(page_title="Análise de Avaliações - Monte Olimpo / Axé Fit", layout="wide")
+
 
 #%% Cabeçalho visual
 col1, col2 = st.columns(2)

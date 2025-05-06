@@ -5,7 +5,7 @@ Created on Sun May  4 19:18:10 2025
 @author: Édipo
 """
 
-#import spacy
+
 import streamlit as st
 import pandas as pd
 import nltk
@@ -27,26 +27,12 @@ stop_words = set(stopwords.words('portuguese'))
 nltk.download('punkt')
 
 
-
 #%% Lista de palavras personalizadas que devem ser removidas da nuvem
 stop_words_personalizadas = {
     "murcha", "molenga", "fria", "batata", "gelada",
     "devaney", "alisson", "luciana", "letícia", "leticia", "alfredo",
     "jéssica", "jessica", "adrian"
 }
-
-
-#%% Carregar modelo spaCy para português
-"""
-import spacy.cli
-try:
-    nlp = spacy.load("pt_core_news_sm")
-except OSError:
-    spacy.cli.download("pt_core_news_sm")
-    nlp = spacy.load("pt_core_news_sm")
-
-"""
-
 
 
 #%% Cabeçalho visual

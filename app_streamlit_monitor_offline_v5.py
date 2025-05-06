@@ -30,11 +30,13 @@ stop_words_personalizadas = {
 
 
 #%% Carregar modelo spaCy para português
+import spacy.cli
 try:
     nlp = spacy.load("pt_core_news_sm")
 except OSError:
-    st.warning("O modelo 'pt_core_news_sm' do spaCy não está instalado. Execute no terminal:\n\npython -m spacy download pt_core_news_sm")
-    st.stop()
+    spacy.cli.download("pt_core_news_sm")
+    nlp = spacy.load("pt_core_news_sm")
+
 
 #%% Configurações da Página
 st.set_page_config(page_title="Análise de Avaliações - Monte Olimpo / Axé Fit", layout="wide")

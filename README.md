@@ -39,7 +39,7 @@ Este é um aplicativo desenvolvido em **Streamlit** para realizar análise de se
 
 4. Execute o app:
    ```bash
-   streamlit run app_streamlit_monitor_offline_v.py
+   streamlit run app_streamlit_monitor_offline_v5.py
    ```
 
 ## Autor
